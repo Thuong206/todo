@@ -1,0 +1,71 @@
+<div style="text-align: center;">
+    <!-- <p>{{log}}</p> -->
+    <div class="search">
+        <h1>{{search}}</h1>
+        <input #ipValue [(ngModel)]="search" class="input" [class.input]="ipLogic" type="text">
+        <button (click)="handleSearch(ipValue)">Search</button>
+    </div>
+
+    <table>
+        <thead>
+            <th>
+                <tr>
+                    ID
+                </tr>
+            </th>
+
+            <th>
+                <tr>
+                    Name
+                </tr>
+            </th>
+
+            <th>
+                <tr>
+                    Email
+                </tr>
+            </th>
+
+            <th>
+                <tr>
+                    Body
+                </tr>
+            </th>
+
+        </thead>
+
+        <tbody *ngFor="let item of log">
+            <div *ngIf=" truthy;then toggleFalse; else toggleTrue"></div>
+            <ng-template #toggleFalse>
+                <td colspan="4">
+                    <tr>Loading....</tr>
+                </td>
+            </ng-template>
+
+            <ng-template #toggleTrue>
+                <td>
+                    <tr style="font-weight: bold; font-size: 5vh;">
+                        {{item.id}}
+                    </tr>
+                </td>
+                <td>
+                    <tr style="word-spacing: 5px;">
+                        {{item.name}}
+                    </tr>
+                </td>
+                <td>
+                    <tr style="word-spacing: 5px;">
+                        {{item.email}}
+                    </tr>
+                </td>
+                <td>
+                    <tr style="word-spacing: 2px;">
+                        {{item.body}}
+                    </tr>
+                </td>
+            </ng-template>
+
+
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,14 @@
+<div>
+    <input class="btn btn-dark" type="file" #img (change)="onChange($event)">
+    <br />
+
+    <button (click)="handleChange()" style="display: block; margin: 0 auto;">Submit</button>
+    <div *ngIf="truthy; then trueCase; else falseCase"></div>
+    <ng-template #falseCase> <img [src]="url" alt="" width="50%">
+    </ng-template>
+    <ng-template #trueCase>
+        <div class="spinner-grow" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </ng-template>
+</div>

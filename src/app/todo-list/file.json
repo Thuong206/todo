@@ -1,0 +1,12 @@
+{
+    "school": {
+        "student": {
+            "name": "Thuong",
+            "age": 21
+        },
+        "teacher": {
+            "name": "Thuong",
+            "age": 21
+        }
+    }
+}

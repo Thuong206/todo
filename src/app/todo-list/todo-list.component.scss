@@ -1,0 +1,39 @@
+.container{
+    margin: 10px auto 0;
+    width: 40%;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: -10px 15px 30px rgb(86, 86, 86);
+    padding: 20px 0;
+
+    .color{
+        background: rgb(32, 199, 3);
+        border: none;
+        outline: none;
+    }
+    li{
+        list-style-type: none;
+        font-weight: bold;
+        border-bottom: 1px solid gray;
+        display: inline-block;
+        padding: 10px 5px;
+    }
+}
+.block{
+    display: none;
+}
+
+//Mobile
+@media only screen and (max-width: 740px){
+    .container{
+        width: 50vh;
+        height: 70%;
+    }
+}
+//TABLE
+@media only screen and (min-width: 741px) and (max-width: 1024px){
+    .container{
+        width: 50vh;
+        height: 70%;
+    }
+}

@@ -1,0 +1,13 @@
+<!--CASE 2  -->
+<div class="btn mid">
+    <h1>CountDown</h1>
+    <h2 #valueH2>{{count}}</h2>
+    <button class="btn btn-start btn-warning" (click)="handleStart($event, valueH2,btnPlush,
+    btnPrev)">
+        {{ boo === true ? 'Start': 'Stop'}}
+    </button>
+    <div class="block-control">
+        <button #btnPlush (click)="handlePlush(valueH2)" class="btn btn-info">Tang</button>
+        <button #btnPrev (click)="handlePrev(valueH2)" class="btn btn-danger">Giam</button>
+    </div>
+</div>

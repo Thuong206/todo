@@ -1,0 +1,40 @@
+<div class="container">
+
+    <h1>Todo List</h1>
+    <ul *ngFor="let item of arr; let index = index">
+        <span>
+            {{index + 1}}.
+            <!-- <div *ngIf="truefalseEdit; then li; else ip"></div>
+            <ng-template #li>
+                <li #list (click)="handleDone(list)"> {{job}}
+                </li>
+            </ng-template>
+            <ng-template #ip>
+                <input type="text" [value]="job">
+            </ng-template>
+            <button type="button" class="btn-close" aria-label="Close" (click)="handleClose(index)"></button>
+            <button type="button" class="btn btn-danger" [class.color]="!truefalseEdit"
+                (click)="handleEdit(index)">{{titleEdit}}</button> -->
+
+            <li>{{ item }}</li>
+            <input #ipValue [class.block]="isWhy" type="text" placeholder="Nhap noi dung can sua" />
+            <button class="btn btn-warning" (click)="handleEdit(ipValue, ip, index)">
+                {{ isWhy ? 'Edit' : 'Save' }}
+            </button>
+            <br />
+        </span>
+    </ul>
+    <input style="border: none; outline: none;" type="text" value="" #ip />
+    <button class="btn btn-info" style="color: white; border-radius: 10px" (click)="handlePush(ip)">Push</button>
+    <!-- <h1>{{nameJob}}</h1> -->
+
+
+    <!-- <input #ip type="text" [(ngModel)]="nameJob"> <br />
+    <button (click)="ip.focus()" (click)="handleSubmit()" class="btn btn-dark">ADD JOBS</button> -->
+
+
+
+    <!-- <h1 *ngFor="let item of newdata | keyvalue">
+        {{item.key}} : {{item.value}}
+    </h1> -->
+</div>

@@ -1,0 +1,23 @@
+.mid {
+    width           : 100vh;
+    box-shadow      : -10px 15px 30px rgb(158, 158, 158);
+    margin-top      : 10vh;
+    background-color: #fff;
+}
+
+.btn-start {
+    width      : 40vh;
+    color      : white;
+    font-weight: bold;
+
+}
+
+@media only screen and (max-width: 750px) {
+    .mid {
+        display        : flex;
+        justify-content: center;
+        flex-direction : column;
+        align-items    : center;
+        height         : 80%;
+    }
+}
